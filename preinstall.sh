@@ -19,7 +19,10 @@ TERRAFORM_HELM_PROVIDER='0.6.0'
 sudo mkdir /opt/k8s || true
 sudo chown ubuntu /opt/ -R
 cd /opt
-echo "Generating ssh key for user Ubuntu"
+
+sudo apt-get update
+sudo apt-get -y install awscli jq unzip git
+
 
 #install kops
 sudo wget -O kops https://github.com/kubernetes/kops/releases/download/$KOPSVERSION/kops-linux-amd64
