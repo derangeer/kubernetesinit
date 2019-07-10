@@ -18,7 +18,7 @@ KOPSVERSION=$(echo $KOPSVERSION | awk -F '.' '{print($1"."$2".0")}')
 TERRAFORM_HELM_PROVIDER='0.6.0'
 sudo mkdir /opt/k8s || true
 sudo chown ubuntu /opt/ -R
-cd /opt/bastion
+cd /opt
 echo "Generating ssh key for user Ubuntu"
 
 #install kops
